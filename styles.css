@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background-color: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+/* HERO */
+.hero { height: 85vh; display: flex; align-items: center; text-align: center; background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0a 100%); }
+.hero h1 { font-size: 4rem; color: #fff; margin-bottom: 16px; letter-spacing: 2px; }
+.hero h1 span { color: #00e5ff; } /* Azul eléctrico */
+.hero p { font-size: 1.2rem; color: #a0a0a0; max-width: 600px; margin: 0 auto 32px; }
+
+.btn-primary, .btn-secondary { display: inline-block; padding: 14px 36px; border-radius: 4px; font-weight: 700; text-decoration: none; transition: 0.3s; margin: 0 10px; }
+.btn-primary { background-color: #00e5ff; color: #000; }
+.btn-primary:hover { background-color: #fff; transform: translateY(-2px); }
+.btn-secondary { background-color: transparent; color: #fff; border: 1px solid #555; }
+.btn-secondary:hover { border-color: #00e5ff; color: #00e5ff; }
+
+/* SECCIONES */
+section { padding: 80px 0; }
+h2 { font-size: 2.5rem; color: #fff; margin-bottom: 16px; text-align: center; font-weight: 300; }
+.subtitle { text-align: center; color: #a0a0a0; margin-bottom: 48px; font-size: 1.1rem; }
+
+/* PORTAFOLIO */
+.grid-portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.video-card { background: #121212; border-radius: 8px; overflow: hidden; transition: 0.3s; border: 1px solid #222; }
+.video-card:hover { transform: translateY(-5px); border-color: #00e5ff; }
+.video-placeholder { height: 200px; background: #1e1e1e; display: flex; align-items: center; justify-content: center; color: #555; font-weight: 500; }
+.video-card h3 { padding: 20px; color: #fff; text-align: center; }
+
+/* SERVICIOS */
+.servicios { background-color: #111; }
+.grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+.servicio { background: #0a0a0a; padding: 32px; border-radius: 8px; border: 1px solid #222; transition: 0.3s; position: relative; }
+.servicio:hover { border-color: #00e5ff; }
+.servicio.destacado { border: 2px solid #00e5ff; background: #111; transform: scale(1.02); }
+.badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #00e5ff; color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+.servicio h3 { color: #fff; font-size: 1.4rem; margin-bottom: 4px; }
+.tagline { color: #00e5ff; font-size: 0.9rem; font-weight: 500; margin-bottom: 16px; }
+.desc { color: #888; font-size: 0.95rem; margin-bottom: 24px; line-height: 1.5; }
+.features { list-style: none; padding: 0; }
+.features li { color: #bbb; font-size: 0.9rem; margin-bottom: 8px; padding-left: 20px; position: relative; }
+.features li::before { content: "✓"; position: absolute; left: 0; color: #00e5ff; }
+
+/* CONTACTO */
+.contacto { text-align: center; background: #0a0a0a; }
+.contact-buttons { display: flex; justify-content: center; gap: 16px; margin-top: 32px; }
+.btn-whatsapp, .btn-email { display: inline-block; padding: 14px 32px; border-radius: 4px; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.btn-whatsapp { background-color: #25D366; color: #fff; }
+.btn-whatsapp:hover { background-color: #1ebe56; }
+.btn-email { background-color: transparent; color: #fff; border: 1px solid #555; }
+.btn-email:hover { border-color: #00e5ff; color: #00e5ff; }
+
+/* BOTÓN FLOTANTE */
+.btn-flotante { position: fixed; bottom: 24px; right: 24px; background-color: #25D366; color: #fff; padding: 14px 24px; border-radius: 50px; font-weight: 500; font-size: 0.95rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); transition: 0.3s; z-index: 1000; animation: flotar 3s ease-in-out infinite; }
+.btn-flotante:hover { background-color: #1ebe56; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); }
+@keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+footer { text-align: center; padding: 32px; border-top: 1px solid #222; color: #555; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+    .contact-buttons { flex-direction: column; }
+    .btn-flotante { bottom: 16px; right: 16px; padding: 12px 20px; font-size: 0.85rem; }
+}
